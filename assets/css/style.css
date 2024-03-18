@@ -3056,7 +3056,7 @@ p {
 }
 
 .contact-two .contact-title {
-  font-size: 24px;
+  font-size: 16px;
   font-weight: 600;
   color: #121212;
 }
@@ -3160,6 +3160,14 @@ p {
   color: #6c6c6c;
 }
 
+.contact-info li a {
+  color: #121212;
+}
+
+.contact-info li a:hover {
+  color: #38f9d7;
+}
+
 #instagram-link {
   color: #121212;
   /* Warna logo Instagram */
@@ -3200,6 +3208,15 @@ p {
   /* Mengubah lebar menjadi 20% dari lebar total */
   max-width: 100%;
   /* Mengubah lebar maksimum menjadi 20% dari lebar total */
+}
+
+.contact-title {
+  /* Warna garis bawah */
+  border-bottom: #2bdbdc 5px solid;
+  /* panjang garis bawah */
+  width: 70px;
+  /* jarak antara judul dengan garis bawah */
+  padding-bottom: 5px;
 }
 
 
