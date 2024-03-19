@@ -3232,6 +3232,7 @@ p {
   .footer-area .footer-widget {
     padding-top: 70px;
     padding-bottom: 100px;
+
   }
 }
 
@@ -3360,5 +3361,31 @@ p {
   color: #121212;
   background-color: #38f9d7;
 }
+
+.footer-title {
+  /* Warna garis bawah */
+  border-bottom: #2bdbdc 5px solid;
+  /* panjang garis bawah */
+  width: 70px;
+  /* jarak antara judul dengan garis bawah */
+  padding-bottom: 5px;
+}
+
+.footer-web li a {
+  color: #121212;
+}
+
+.footer-web li a:hover {
+  color: #38f9d7;
+}
+
+.footer-support li a {
+  color: #121212;
+}
+
+.footer-support li a:hover {
+  color: #38f9d7;
+}
+
 
 /*# sourceMappingURL=style.css.map */
