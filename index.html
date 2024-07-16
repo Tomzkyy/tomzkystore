@@ -93,6 +93,8 @@
                                         <a class="page-scroll" href="#pricing">PRICE LIST</a>
                                     </li>
                                     <li class="nav-item">
+                                        <a class="page-scroll" href="#calculator">CALCULATOR</a>
+                                    <li class="nav-item">
                                         <a class="page-scroll" href="#contact">CONTACT</a>
                                     </li>
                                 </ul>
@@ -532,6 +534,67 @@
 
     <!--====== PRICE LIST STYLE EIGHT ENDS ======-->
 
+    <!--====== CALCULATOR WINRATE PART START ======-->
+
+    <section id="calculator" class="calculator-area">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="section-title text-center pb-20">
+                        <h4 class="title wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">Calculator Winrate
+                        </h4>
+                        <p class="text wow fadeInUp" data-wow-duration="1s" data-wow-delay="1s">Digunakan untuk
+                            menghitung jumlah match yang harus dimainkan tanpa kekalahan untuk mencapai winrate yang
+                            diinginkan.</p>
+                    </div> <!-- section title -->
+                </div>
+            </div> <!-- row -->
+            <div class="row justify-content-center wow fadeInUp" data-wow-duration="1s" data-wow-delay="1s">
+                <div class="col-lg-6 col-md-7 col-sm-9">
+                    <div class="calculate-style-one mt-40">
+                        <div class="calculate-header text-center">
+                            <!-- Input total match, winrate saat ini, winrate yang diinginkan -->
+                            <form>
+                                <div class="form-group form-row">
+                                    <label for="total_match">Total Match</label>
+                                    <input type="number" class="form-control" id="total_match" name="total_match"
+                                        placeholder="Contoh : 250" required>
+                                </div>
+                                <div class="form-group form-row">
+                                    <label for="current_winrate">Winrate saat ini</label>
+                                    <input type="number" class="form-control" id="current_winrate"
+                                        name="current_winrate" placeholder="Contoh : 55" required>
+                                </div>
+                                <div class="form-group form-row">
+                                    <label for="target_winrate">Winrate yang diinginkan</label>
+                                    <input type="number" class="form-control" id="target_winrate" name="target_winrate"
+                                        placeholder="Contoh : 75" required>
+                                </div>
+                                <button type="button" class="main-btn rounded-three"
+                                    onclick="calculateWinrate()">Calculate</button>
+                            </form>
+
+                            <div id="result"></div>
+
+                            <script>
+                                function calculateWinrate() {
+                                    const totalMatch = parseInt(document.getElementById('total_match').value);
+                                    const currentWinrate = parseFloat(document.getElementById('current_winrate').value);
+                                    const targetWinrate = parseFloat(document.getElementById('target_winrate').value);
+
+                                    // Contoh perhitungan sederhana, sesuaikan dengan kebutuhan
+                                    const matchesNeeded = Math.round((targetWinrate * totalMatch - currentWinrate * totalMatch) / (100 - targetWinrate));
+
+                                    document.getElementById('result').textContent = `Anda harus bermain sebanyak ${matchesNeeded} match tanpa kekalahan untuk mencapai winrate ${Math.round(targetWinrate)}%`;
+                                }
+                            </script>
+                        </div> <!-- pricing style one -->
+                    </div>
+                </div>
+            </div>
+    </section>
+
+
     <!--====== CONTACT PART START ======-->
 
     <section id="contact" class="contact-area">
@@ -539,9 +602,15 @@
             <div class="row justify-content-center">
                 <div class="col-lg-7">
                     <div class="section-title text-center pb-20">
-                        <h4 class="title wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">TOMZKY STORE</h4>
-                        <p class="text wow fadeInUp" data-wow-duration="1s" data-wow-delay="1s">Untuk pertanyaan atau
-                            bantuan, silahkan untuk hubungi tim layanan kami. Kami berkomitmen untuk merespons dalam
+                        <h4 class="title wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">TOMZKY
+                            STORE
+                        </h4>
+                        <p class="text wow fadeInUp" data-wow-duration="1s" data-wow-delay="1s">Untuk
+                            pertanyaan
+                            atau
+                            bantuan, silahkan untuk hubungi tim layanan kami. Kami berkomitmen untuk
+                            merespons
+                            dalam
                             waktu 24 jam.
                     </div> <!-- section title -->
                 </div>
@@ -636,7 +705,8 @@
                     <div class="row align-items-center">
                         <div class="col-lg-5">
                             <div class="copyright text-center text-lg-left mt-10">
-                                <p class="text" style="margin-top:50px;">© 2024 TOMZKY. All rights reserved.</p>
+                                <p class="text" style="margin-top:50px;">© 2024 TOMZKY. All rights reserved.
+                                </p>
                             </div> <!--  copyright -->
                         </div>
                     </div> <!-- row -->
