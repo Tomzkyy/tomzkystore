@@ -87,13 +87,14 @@
                                         <a class="page-scroll" href="#home">HOME</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="page-scroll" href="#portfolio">TIER</a>
+                                        <a class="page-scroll" href="#calculator">CALCULATOR</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="page-scroll" href="#pricing">PRICE LIST</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="page-scroll" href="#calculator">CALCULATOR</a>
+                                        <a class="page-scroll" href="#portfolio">TIER</a>
+                                    </li>
                                     <li class="nav-item">
                                         <a class="page-scroll" href="#contact">CONTACT</a>
                                     </li>
@@ -182,80 +183,67 @@
 
     <!--====== ABOUT PART ENDS ======-->
 
-    <!--====== TIER PART START ======-->
+    <!--====== CALCULATOR WINRATE PART START ======-->
 
-    <section id="portfolio" class="portfolio-area">
+    <section id="calculator" class="calculator-area">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-6">
-                    <div class="section-title text-center pb-20" style="margin-left: -50px;">
-                        <h4 class="title wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">TIER / RANK</h4>
+                    <div class="section-title text-center pb-20">
+                        <h4 class="title wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">KALKULATOR WINRATE
+                        </h4>
+                        <p class="text wow fadeInUp" data-wow-duration="1s" data-wow-delay="1s">Digunakan untuk
+                            menghitung jumlah match yang harus dimainkan tanpa kekalahan untuk mencapai winrate yang
+                            diinginkan.</p>
+                    </div> <!-- section title -->
+                </div>
+            </div> <!-- row -->
+            <div class="row justify-content-center wow fadeInUp" data-wow-duration="1s" data-wow-delay="1s">
+                <div class="col-lg-6 col-md-7 col-sm-9">
+                    <div class="calculate-style-one mt-40">
+                        <div class="calculate-header text-center">
+                            <!-- Input total match, winrate saat ini, winrate yang diinginkan -->
+                            <form>
+                                <div class="form-group form-row">
+                                    <label for="total_match">Total Match</label>
+                                    <input type="number" class="form-control" id="total_match" name="total_match"
+                                        placeholder="Contoh : 250" required>
+                                </div>
+                                <div class="form-group form-row">
+                                    <label for="current_winrate">Winrate saat ini</label>
+                                    <input type="number" class="form-control" id="current_winrate"
+                                        name="current_winrate" placeholder="Contoh : 55" required>
+                                </div>
+                                <div class="form-group form-row">
+                                    <label for="target_winrate">Winrate yang diinginkan</label>
+                                    <input type="number" class="form-control" id="target_winrate" name="target_winrate"
+                                        placeholder="Contoh : 75" required>
+                                </div>
+                                <button type="button" class="main-btn rounded-three"
+                                    onclick="calculateWinrate()">Hitung</button>
+                            </form>
+
+                            <div id="result"></div>
+
+                            <script>
+                                function calculateWinrate() {
+                                    const totalMatch = parseInt(document.getElementById('total_match').value);
+                                    const currentWinrate = parseFloat(document.getElementById('current_winrate').value);
+                                    const targetWinrate = parseFloat(document.getElementById('target_winrate').value);
+
+                                    // Contoh perhitungan sederhana, sesuaikan dengan kebutuhan
+                                    const matchesNeeded = Math.round((targetWinrate * totalMatch - currentWinrate * totalMatch) / (100 - targetWinrate));
+
+                                    document.getElementById('result').textContent = `Anda harus bermain sebanyak ${matchesNeeded} match tanpa kekalahan untuk mencapai winrate ${Math.round(targetWinrate)}%`;
+                                }
+                            </script>
+                        </div> <!-- calculate style one -->
                     </div>
                 </div>
             </div>
-            <div class="container" style="margin-top: 100px; margin-left: -20px;">
-                <div class="row client-active wow fadeInUp" data-wow-duration="1s" data-wow-delay="1s">
-                    <div class="col-lg-3">
-                        <div class="single-logo text-center">
-                            <img src="https://dafunda.com/wp-content/uploads/2023/12/Mythical_Immortal.webp" alt="Logo">
-                        </div> <!-- single logo -->
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="single-logo text-center">
-                            <img src="https://dafunda.com/wp-content/uploads/2023/12/Mythical_Glory.webp" alt="Logo">
-                        </div> <!-- single logo -->
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="single-logo text-center">
-                            <img src="https://dafunda.com/wp-content/uploads/2023/12/Mythical-Honor.webp" alt="Logo">
-                        </div> <!-- single logo -->
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="single-logo text-center">
-                            <img src="https://dafunda.com/wp-content/uploads/2022/12/mythic.jpg" alt="Logo">
-                        </div> <!-- single logo -->
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="single-logo text-center">
-                            <img src="https://dafunda.com/wp-content/uploads/2022/12/urutan-rank-mobile-legends-ml-3.jpg"
-                                alt="Logo">
-                        </div> <!-- single logo -->
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="single-logo text-center">
-                            <img src="https://dafunda.com/wp-content/uploads/2023/12/Epic-Rank-Mobile-Legends.png"
-                                alt="Logo">
-                        </div> <!-- single logo -->
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="single-logo text-center">
-                            <img src="https://dafunda.com/wp-content/uploads/2022/12/grandmaster.jpg" alt="Logo">
-                        </div> <!-- single logo -->
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="single-logo text-center">
-                            <img src="https://dafunda.com/wp-content/uploads/2022/12/urutan-rank-mobile-legends-ml-2.jpg"
-                                alt="Logo">
-                        </div> <!-- single logo -->
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="single-logo text-center">
-                            <img src="https://dafunda.com/wp-content/uploads/2022/12/urutan-rank-mobile-legends-ml-1.jpg"
-                                alt="Logo">
-                        </div> <!-- single logo -->
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="single-logo text-center">
-                            <img src="https://dafunda.com/wp-content/uploads/2022/12/urutan-rank-mobile-legends-ml.jpg"
-                                alt="Logo">
-                        </div> <!-- single logo -->
-                    </div>
-                </div> <!-- row -->
-            </div> <!-- container -->
-        </div> <!-- container -->
     </section>
 
-    <!--====== TIER PART ENDS ======-->
+    <!--====== CALCULATOR WINRATE PART ENDS ======-->
 
     <!--====== PRICE LIST STYLE EIGHT START ======-->
 
@@ -447,7 +435,7 @@
                 <div class="col-lg-3 col-md-7 col-sm-9">
                     <div class="pricing-style-one mt-40">
                         <div class="pricing-icon text-center">
-                            <img src="assets/images/mabar9.jpeg" alt="">
+                            <img src="assets/images/mabar1.png" alt="">
                         </div>
                         <div class="pricing-header text-center">
                             <h5 class="sub-title">Mabar VIP</h5>
@@ -468,7 +456,7 @@
                 <div class="col-lg-3 col-md-7 col-sm-9">
                     <div class="pricing-style-one mt-40">
                         <div class="pricing-icon text-center">
-                            <img src="assets/images/mabar3.jpeg" alt="">
+                            <img src="assets/images/mabar2.png" alt="">
                         </div>
                         <div class="pricing-header text-center">
                             <h5 class="sub-title">Mabar VIP</h5>
@@ -489,7 +477,7 @@
                 <div class="col-lg-3 col-md-7 col-sm-9">
                     <div class="pricing-style-one mt-40">
                         <div class="pricing-icon text-center">
-                            <img src="assets/images/mabar1.jpeg" alt="">
+                            <img src="assets/images/mabar3.png" alt="">
                         </div>
                         <div class="pricing-header text-center">
                             <h5 class="sub-title">Mabar VIP</h5>
@@ -510,7 +498,7 @@
                 <div class="col-lg-3 col-md-7 col-sm-9">
                     <div class="pricing-style-one mt-40">
                         <div class="pricing-icon text-center">
-                            <img src="assets/images/mabar6.jpeg" alt="">
+                            <img src="assets/images/mabar4.png" alt="">
                         </div>
                         <div class="pricing-header text-center">
                             <h5 class="sub-title">Mabar VIP</h5>
@@ -534,65 +522,65 @@
 
     <!--====== PRICE LIST STYLE EIGHT ENDS ======-->
 
-    <!--====== CALCULATOR WINRATE PART START ======-->
+    <!--====== PEMBAYARAN PART START ======-->
 
-    <section id="calculator" class="calculator-area">
+    <section id="portfolio" class="portfolio-area">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-6">
-                    <div class="section-title text-center pb-20">
-                        <h4 class="title wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">Calculator Winrate
-                        </h4>
-                        <p class="text wow fadeInUp" data-wow-duration="1s" data-wow-delay="1s">Digunakan untuk
-                            menghitung jumlah match yang harus dimainkan tanpa kekalahan untuk mencapai winrate yang
-                            diinginkan.</p>
-                    </div> <!-- section title -->
-                </div>
-            </div> <!-- row -->
-            <div class="row justify-content-center wow fadeInUp" data-wow-duration="1s" data-wow-delay="1s">
-                <div class="col-lg-6 col-md-7 col-sm-9">
-                    <div class="calculate-style-one mt-40">
-                        <div class="calculate-header text-center">
-                            <!-- Input total match, winrate saat ini, winrate yang diinginkan -->
-                            <form>
-                                <div class="form-group form-row">
-                                    <label for="total_match">Total Match</label>
-                                    <input type="number" class="form-control" id="total_match" name="total_match"
-                                        placeholder="Contoh : 250" required>
-                                </div>
-                                <div class="form-group form-row">
-                                    <label for="current_winrate">Winrate saat ini</label>
-                                    <input type="number" class="form-control" id="current_winrate"
-                                        name="current_winrate" placeholder="Contoh : 55" required>
-                                </div>
-                                <div class="form-group form-row">
-                                    <label for="target_winrate">Winrate yang diinginkan</label>
-                                    <input type="number" class="form-control" id="target_winrate" name="target_winrate"
-                                        placeholder="Contoh : 75" required>
-                                </div>
-                                <button type="button" class="main-btn rounded-three"
-                                    onclick="calculateWinrate()">Calculate</button>
-                            </form>
-
-                            <div id="result"></div>
-
-                            <script>
-                                function calculateWinrate() {
-                                    const totalMatch = parseInt(document.getElementById('total_match').value);
-                                    const currentWinrate = parseFloat(document.getElementById('current_winrate').value);
-                                    const targetWinrate = parseFloat(document.getElementById('target_winrate').value);
-
-                                    // Contoh perhitungan sederhana, sesuaikan dengan kebutuhan
-                                    const matchesNeeded = Math.round((targetWinrate * totalMatch - currentWinrate * totalMatch) / (100 - targetWinrate));
-
-                                    document.getElementById('result').textContent = `Anda harus bermain sebanyak ${matchesNeeded} match tanpa kekalahan untuk mencapai winrate ${Math.round(targetWinrate)}%`;
-                                }
-                            </script>
-                        </div> <!-- calculate style one -->
+                    <div class="section-title text-center pb-20" style="margin-left: -50px;">
+                        <h4 class="title wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">PEMBAYARAN</h4>
                     </div>
                 </div>
             </div>
+            <div class="container" style="margin-top: 100px; margin-left: -20px;">
+                <div class="row client-active wow fadeInUp" data-wow-duration="1s" data-wow-delay="1s">
+                    <div class="col-lg-3">
+                        <div class="single-logo text-center">
+                            <img src="assets/images/indomaret.png" alt="Logo " style="margin-top: 30px;">
+                        </div> <!-- single logo -->
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="single-logo text-center">
+                            <img src="assets/images/alfamart.png" alt="Logo"
+                                style="margin-top: 30px; margin-left: 10px;">
+                        </div> <!-- single logo -->
+                    </div>
+
+                    <div class="col-lg-3">
+                        <div class="single-logo text-center">
+                            <img src="assets/images/alfamidi.png" alt="Logo"
+                                style="margin-top: 40px; margin-left: 10px;">
+                        </div> <!-- single logo -->
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="single-logo text-center">
+                            <img src="assets/images/brimo.png" alt="Logo"
+                                style="width: 70%; margin-top: 10px; margin-left: 30px;">
+                        </div> <!-- single logo -->
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="single-logo text-center">
+                            <img src="assets/images/jago.png" alt="Logo" style="width: 70%; margin-top: 10px;">
+                        </div> <!-- single logo -->
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="single-logo text-center">
+                            <img src="assets/images/gopay.png" alt="Logo" style="width: 100%; margin-left: -40px;">
+                        </div> <!-- single logo -->
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="single-logo text-center">
+                            <img src="assets/images/danabawah.png" alt="Logo"
+                                style="width: 70%; margin-top: 12px; margin-left: -20px;">
+                        </div> <!-- single logo -->
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div> <!-- container -->
     </section>
+
+    <!--====== PEMBAYARAN PART ENDS ======-->
 
 
     <!--====== CONTACT PART START ======-->
@@ -667,32 +655,31 @@
                             <div class="row mt-6">
                                 <ul class="payments-info">
                                     <li><img src="assets/images/indomaret.png" alt=""
-                                            style="width: 50px; margin-left: 15px; margin-top: 25px;"></li>
+                                            style="width: 75px; margin-left: 15px; margin-top: 15px;"></li>
                                 </ul>
                                 <ul class="payments-info">
                                     <li><img src="assets/images/alfamart.png" alt=""
-                                            style="width: 50px; margin-left: 13px; margin-top: 24px;"></li>
+                                            style="width: 75px; margin-left: 13px; margin-top: 15px;"></li>
                                 </ul>
                             </div> <!-- row -->
                             <div class="row mt-6">
                                 <ul class="payments-info">
-                                    <li><img src="assets/images/alfamidi.png" alt=""
-                                            style="width: 50px; margin-left: 17px; margin-top: 29px;"></li>
+                                    <li><img src="assets/images/brimo.png" alt=""
+                                            style="width: 50px; margin-left: 25px; margin-top: 10px;"></li>
                                 </ul>
                                 <ul class="payments-info">
                                     <li><img src="assets/images/jago.png" alt=""
-                                            style="width: 35px; margin-top: 10px; margin-left: 20px;"></li>
+                                            style="width: 50px; margin-left: 40px; margin-top: 10px;"></li>
                                 </ul>
                             </div> <!-- row -->
                             <div class="row mt-6">
                                 <ul class="payments-info">
-                                    <li><img src="assets/images/gopay.png" alt=""
-                                            style="width: 65px; margin-left: 5px;">
+                                    <li><img src="assets/images/gopay.png" alt="" style="width: 100px;">
                                     </li>
                                 </ul>
                                 <ul class="payments-info">
                                     <li><img src="assets/images/danabawah.png" alt=""
-                                            style="width: 40px; margin-top: 10px; margin-left: 17px;"></li>
+                                            style="width: 65px; margin-top: 12px; margin-left: 7px;"></li>
                                 </ul>
                             </div> <!-- row -->
                         </div>
